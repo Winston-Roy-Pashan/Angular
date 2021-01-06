@@ -2,19 +2,19 @@
 @import '../../../styles.scss';
 
 .header{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
     .text{
-        justify-content: center;
-        align-content: center;
-        align-items: center;
 
         .paragraph{
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
+
             p{
                 display: inline;
                 padding-right: 1rem;
              }
-                    .review{
+                .review{
                         height: 22px;
                         width: 62px;
                         color: #4A4A4A;
@@ -23,7 +23,7 @@
                         letter-spacing: -0.27px;
                         line-height: 22px;
                     }
-                    .right{
+                .right{
                         display: block;
                         float: right;
                             .show{
@@ -45,27 +45,31 @@
                                 line-height: 19px;
                                 text-align: right;
                             }
-                        }
+                    }
                 
             }
+
             .rating{
-                // justify-content: center;
-                // align-content: center;
-                // align-items: center;
+
                 .profile{
                     display: flex;
+
                 .profilepic{
                     padding: 1rem;
+
                     img { 
                         width: 60px; 
                         height: 60px;
                       } 
                 }
+
                 .details{
                     padding: 1rem;
+
                     .username{
                         font-size: 16px;
                     }
+
                     .reviewrating{
                         font-size: 14px;
                     }
@@ -75,6 +79,7 @@
                 display: flex;
                 background-color: white;
                 border: none;
+
                 .like{
                     position: absolute;
                     right: 0;
@@ -89,11 +94,12 @@
                     }
                 }
             }
-            }
+        }
 
-            
+            .side{
+                margin-top: 2.5rem;
+
                 .card-title{
-                    height: 30px;
                     color: #000000;
                     @include fontOpen_Sans;
                     font-size: 22px;
@@ -103,6 +109,7 @@
                     padding: 1rem;
 
                 }
+
                 .food{
                     height: 22px;
                     padding: 6%;
@@ -113,6 +120,7 @@
                     letter-spacing: -0.24px;
                     line-height: 22px;
                 }
+
                 .ratingImage{
                     padding-left: 11%;
                     padding-top: 8%;
@@ -122,6 +130,7 @@
                     margin-right: 0.75rem; 
                   } 
                 }
+
                 .line{
                     box-sizing: border-box;
                     height: 2px;
@@ -145,9 +154,27 @@
                         line-height: 17px;
                     }
                 }
+
+                .input-text{
+                    width: 230px;
+                    margin-left: 6%;
+                }
+
+                .addimage{
+                    text-align: right;
+                    color: #F57C00;
+                    padding-right: 3%;
+                }
+
+                .submit{
+                    background:linear-gradient(138.33deg, #F3698E 0%, #FEB456 100%);
+                    color: white;
+                    border: none;
+                    height: 50px;
+                    border-radius: 1rem;
+                    margin: 5%;
+                    text-decoration: none;
+                }
             }
-        
-        
-        
-       
+        }     
 }
