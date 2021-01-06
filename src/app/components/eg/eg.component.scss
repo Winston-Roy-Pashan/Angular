@@ -1,0 +1,64 @@
+// #header {
+//     /* Location of the image */
+//     background-image: url("../../../assets/Resturant\ Image.png");
+  
+//     /* Background image is centered vertically and horizontally at all times */
+//     background-position: center center;
+  
+//     /* Background image doesn't tile */
+//     background-repeat: no-repeat;
+  
+//     /* This is what makes the background image rescale based
+//        on the container's size */
+//     background-size: cover;
+  
+//     /* Set a background color that will be displayed
+//        while the background image is loading */
+//     background-color: #464646;
+  
+//      // min-height: 50vh;
+//   }
+  
+  .landing-page {
+    background-image: url("../../../assets/Resturant\ Image.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-width: 1036px;
+    //background-size: cover;
+    //background-color: #464646;
+
+      text-align: center;
+      color: black;
+      text-transform: uppercase;
+      font-weight: 200;
+      background-size: 100%;
+  }
+  
+  .logo {
+      padding-top: 5%;
+  }
+  
+  .intro h6{
+      padding-top: 5%;
+      font-size: 250%;
+  }
+  
+  .intro h2{
+      padding-top: 1%;
+      font-size: 400%;
+  }
+  
+  .intro h4{
+      padding-top: 1%;
+      font-size: 200%;
+  }
+  
+  .lets-talk {
+      padding-top: 5%;
+      padding-bottom: 5%;
+  }
+  
+  
+  .second {
+      text-align: center;
+  }

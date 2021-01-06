@@ -1,0 +1,45 @@
+<div class="container main">hii
+
+    <div class="allPhotos">
+        <p>All Photos</p>
+        <p>
+            <img class="arrow" src="../../../assets/right_arrow.png" alt="right-arrow" />
+        </p>
+    </div>
+
+    <br>
+    <div class="pictures">
+        <div class="gallery" *ngFor="let img of imagelist">
+            <!-- <a routerLink="/movies/{{movie.id}}"> -->
+            <img class="image" [src]="img.imageUrl" alt="" (click)="openOverlay()">
+            <!-- </a> -->
+        </div>
+    </div>
+    <br>
+
+    <div class="viewMore"><br>
+        <p class="corner">View more ></p>
+    </div>
+</div>
+
+<div class="container imgDisplay" *ngIf="display">
+    <div class="cancel">
+        <img class="image" src="../../../assets/cancel.png" alt="cancel" (click)="closeOverlay()">
+    </div>
+    <div class="container displayImage">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMduJmAUkouzAW_iuiBcLbXJrjOwcrwj-6fg&usqp=CAU"
+            alt="" class="img-fluid mx-auto d-block">
+    </div>
+    <div class="row naming">
+        <div class="col-md-6 content float-left ">
+            <p>The Nachos cream stone</p>
+        </div>
+        <div class="col text-right">
+            <p class="pager">
+                <a href="#" class="previous">&laquo;</a>
+                <a href="#" class="next">&raquo;</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="overlay" *ngIf="!overlay"></div>

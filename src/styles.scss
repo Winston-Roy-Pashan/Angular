@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "styles-variables";
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+@import url('https://use.fontawesome.com/releases/v5.7.0/css/all.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+@mixin fontBebas_Neue {
+    font-family: 'Bebas Neue', cursive;
+}
+
+@mixin fontOpen_Sans {
+    font-family: "Open Sans";
+}
+
+@mixin gradient-text {
+    background-color: #FEB456;
+    background-image: linear-gradient(138.33deg, #F3698E 0%, #FEB456 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
