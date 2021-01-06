@@ -32,18 +32,18 @@ export class GalleryComponent implements OnInit {
 
   constructor(private galleryservice: GalleryService,private activateRoute: ActivatedRoute) { }
 
-  imagelist : Images[];
+  imagelist : Images[] | undefined;
 
   ngOnInit(): void {
     this.getAllImages();
-    const id =Number(this.activateRoute.snapshot.paramMap.get('phoneid'));
-    this.loadImage(id);
+    // const id =Number(this.activateRoute.snapshot.paramMap.get('phoneid'));
+    // this.loadImage(id);
 
   }
 
-loadImage(id: number): void {
-  this.image = this.galleryservice.getImage(id)
-}
+// loadImage(id: number): void {
+//   this.image = this.galleryservice.getImage(id)
+// }
 
   getAllImages(): void {
     this.imagelist = this.galleryservice.getAllImages();

@@ -5,16 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ResturantBackgroundComponent } from './components/resturant-background/resturant-background.component';
-import { EgComponent } from './components/eg/eg.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { ReviewRatingComponent } from './components/review-rating/review-rating.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     ResturantBackgroundComponent,
-    EgComponent,
-    GalleryComponent
+    GalleryComponent,
+    ReviewRatingComponent
   ],
   imports: [
     BrowserModule,

@@ -14,8 +14,8 @@ export class GalleryService {
     return IMAGE;
   }
 
-  getImage(id: number): Images {
-    return IMAGE.find(img => img.id === id);
-  }
+  // getImage(id: number): Images {
+  //   return IMAGE.find(img => img.id === id);
+  // }
 
 }
