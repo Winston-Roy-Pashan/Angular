@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GalleryService } from 'src/app/service/gallery.service';
 import { Images } from '../../interface/gallery';
+import { IMAGE } from '../gallery/mocklist';
 
 @Component({
   selector: 'app-gallery',
@@ -10,10 +11,13 @@ import { Images } from '../../interface/gallery';
 })
 export class GalleryComponent implements OnInit {
 
+  
   display = false;
   overlay = true;
 
-  openOverlay = () => {
+  openOverlay = (id:number) => {
+   console.log("id of img is..",id);
+   this.loadImage(id);
     this.overlay = !this.overlay;
     this.display = true;
   }
@@ -28,25 +32,26 @@ export class GalleryComponent implements OnInit {
     imageUrl: ''
   }
 
- 
+  imagelist: Images[];
 
-  constructor(private galleryservice: GalleryService,private activateRoute: ActivatedRoute) { }
+  constructor(private galleryservice: GalleryService, private activateRoute: ActivatedRoute) {
+    this.imagelist = [];
+  }
 
-  imagelist : Images[] | undefined;
+
 
   ngOnInit(): void {
     this.getAllImages();
-    // const id =Number(this.activateRoute.snapshot.paramMap.get('phoneid'));
-    // this.loadImage(id);
-
   }
 
-// loadImage(id: number): void {
-//   this.image = this.galleryservice.getImage(id)
-// }
+  loadImage(id: number): void {
+   this.image =  this.galleryservice.getImage(id);
+    console.log("load img .....",this.image);
+  }
 
   getAllImages(): void {
     this.imagelist = this.galleryservice.getAllImages();
+
   }
 
 }

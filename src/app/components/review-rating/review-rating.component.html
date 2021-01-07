@@ -33,6 +33,29 @@
                     </div>
                 </div>
             </div>
+            <div class="card rating" *ngFor="let item of reviewRating">
+                <div class="profile">
+                    <div class="profilepic">
+                        <img class="shadow-lg rounded-circle" [src]="item.imageurl"
+                            alt="user profile">
+                    </div>
+                    <div class="details">
+                        <span class="username">{{ item.name }}</span> <br>
+                        <span class="reviewrating">{{ item.review }} reviews, {{ item.rating }} ratings</span><br>
+                        <img src="../../../assets/Rating 4.png" alt="rating 4" />
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text">{{ item.comment }}</p>
+                </div>
+                <div class="card-footer footer">
+                    <div class="date">{{ item.date }}</div>
+                    <div class="like">
+                        <i class="fas fa-thumbs-up"> <span class="likes">{{ item.like }}</span></i>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="col-md-4">
@@ -85,7 +108,7 @@
                     <img src="../../../assets/icn_check.png" alt="saved" />
                     <span class="saved">saved</span>
                 </div>
-                <div class="md-form w-auto p-6 input-text">
+                <div class="md-form input-text">
                     <input mdbInput type="text" placeholder="Start writing your review" id="form1" class="form-control">
                     <label for="form1" class="">Write a review</label>
                 </div>

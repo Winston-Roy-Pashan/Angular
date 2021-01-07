@@ -1,4 +1,4 @@
-<div class="container main">hii
+<div class="container main">
 
     <div class="allPhotos">
         <p>All Photos</p>
@@ -11,7 +11,7 @@
     <div class="pictures">
         <div class="gallery" *ngFor="let img of imagelist">
             <!-- <a routerLink="/movies/{{movie.id}}"> -->
-            <img class="image" [src]="img.imageUrl" alt="" (click)="openOverlay()">
+            <img class="image" [src]="img.imageUrl" alt="" (click)="openOverlay(img.id)">
             <!-- </a> -->
         </div>
     </div>
@@ -22,17 +22,16 @@
     </div>
 </div>
 
-<div class="container imgDisplay" *ngIf="display">
+<div class="container imgDisplay" *ngIf="display" >
     <div class="cancel">
         <img class="image" src="../../../assets/cancel.png" alt="cancel" (click)="closeOverlay()">
     </div>
     <div class="container displayImage">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMduJmAUkouzAW_iuiBcLbXJrjOwcrwj-6fg&usqp=CAU"
-            alt="" class="img-fluid mx-auto d-block">
+        <img [src]="image.imageUrl" alt="" class="img-fluid mx-auto d-block">
     </div>
     <div class="row naming">
         <div class="col-md-6 content float-left ">
-            <p>The Nachos cream stone</p>
+            <p>{{image.name}}</p>
         </div>
         <div class="col text-right">
             <p class="pager">

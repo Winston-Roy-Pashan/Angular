@@ -1,7 +1,6 @@
 import { Images } from '../../interface/gallery';
 
 export const IMAGE: Images[] = [
-
     {
         id: 1,
         name: 'chicken sandwich',
