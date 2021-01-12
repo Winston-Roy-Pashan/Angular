@@ -1,0 +1,248 @@
+::ng-deep {
+.bottombox >  mat-datepicker-toggle {
+    color:  #D92756;
+  }
+}     
+    
+mat-card{
+    margin-left:10%;
+    margin-right:10%;
+
+    .image1{
+        margin-left: 70px;
+    }
+
+    mat-icon{
+     font-size: 15px;
+    }
+
+    .profile{
+        margin-top:-20px;
+        margin-right:156px;
+        float:right;
+        width:200px;
+        height:100px;
+
+        .name{
+         float :left;
+          padding:5px;
+          height:50%;
+          margin-top:35px;
+        }
+
+        .img-container {
+            margin-left:90px;  
+            height: 55%;
+            overflow: hidden;
+            margin-top:20px;
+            border-radius:50%;
+            border: 2px solid #D92756;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.main {
+    margin-left:180px;
+    margin-right:180px;
+    display: inline-flex;
+   
+
+    .form1 {
+        height: 952px;
+        width: 930px;
+        border-radius: 20px;
+        box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
+        margin-left: 10px;
+        margin-right: 130px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        .mainbox{
+            width: 100%;
+            height: 100%;
+
+            mat-form-field{
+                width:100%;
+                font-size: 20px;
+            }
+
+        #btmicon{
+            box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
+            font-size: 65px;
+            float: right;
+            margin-top: -91px;
+            margin-right: 80px;
+        }
+
+        .sidebox{
+            margin-top: 15px;
+            float:right;
+            height: 450px;
+            width: 265px;
+            border-left:solid #d92756;
+            padding-left:30px;
+            padding-right: 30px;
+          //  color:#e20e78 ;
+            button{
+                background-color: rgba(217,39,86,0.05);
+                border:solid #ffffff;
+                margin: 20px;
+                border-radius:10px;
+                width:200px;
+                height: 50px;
+                text-align: left;
+                font-weight: bold;
+                font-size: 15px;
+                margin-left:-10px;
+                color:#d92756 ;
+
+                mat-icon{
+                    float: left;
+                    margin-right: 8px;
+                    margin-top: -3px;
+                }
+            }
+        }
+        .topbox{
+            height: 492px;
+            width: 630px;
+            padding: 15px;
+
+            .btntext{
+                width:48%;
+            }
+
+            .btncheck{
+                float: right;
+                width:48%;
+            }
+        }
+        .bottombox{
+                height: 394px;
+                width: 630px;
+                padding: 15px;
+
+                .date{
+                    .dateicon{
+                        color:#D92756 ;
+                        border: white;
+                    }
+                    .date1{
+                        width:31%;
+                    }
+
+                    .date2{
+                        width:31%;
+                        margin-left: 22px;
+                    }
+
+                    .date3{
+                        width:31%;
+                        float:right;
+                        margin-top: -111px;
+                    }
+                }
+                
+                .content1{
+                    width:48%;
+
+                    mat-icon{
+                        margin-left: 242px;
+                        margin-top: -31px;
+                        float: right;
+                    }
+                }
+                .content2{
+                    float: right;
+                    width:48%;
+
+                    mat-icon{
+                        margin-top: -31px;
+                        float: right;
+                    }
+                }
+            }
+        .Option-container{
+
+          .toggle-option{
+            position: relative;
+            z-index:5;
+              position: absolute;
+              bottom: 100px;
+              margin-left: 688px;
+
+              .display{
+                  border-radius: 24px;
+                  background-color: #fcf4f6;
+                  width:194.6px;
+                  height:33.6px;
+                  margin:0.5em;
+                  margin-bottom: 1.5em;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: #d92756;
+                  font-size: 11px;
+                  font-weight: 500;
+                  letter-spacing: 0.88px;
+                  line-height: 11.2px;
+                  text-align: center;
+                  outline: none;
+                  cursor: pointer;
+              }
+             
+              
+              .display1{
+                    button{     
+                    border-radius: 24px;
+                    border: none;
+                    background-color: #fcf4f6;
+                    width:194.6px;
+                    height:33.6px;
+                    margin:0.5em;
+                    margin-bottom: 1.5em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #d92756;
+                    font-size: 11px;
+                    font-weight: 551;
+                    letter-spacing: 0.88px;
+                    line-height: 11.2px;
+                    text-align: center;
+                    outline: none;
+                    cursor: pointer;
+                     }
+              } 
+          } 
+          .icon1{
+              position: relative;
+              z-index:5;
+            margin-left: 85%;
+            margin-top: -13%;
+          }
+         
+        }
+        
+
+        }
+        
+    }
+    
+}
+.overlay{
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    cursor: pointer;
+}   
+    

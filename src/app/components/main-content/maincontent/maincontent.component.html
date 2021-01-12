@@ -1,0 +1,146 @@
+<div class="container">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<mat-card>
+  <img class="image1" src="../../../assets/Robosoft_logo_horizontal.png">
+  <div class="profile">
+    <div class="name">
+      <p>Jane Doe
+      <P>
+    </div>
+    <div class="img-container">
+      <img src="https://i.stack.imgur.com/34AD2.jpg" alt="">
+    </div>
+  </div>
+</mat-card><br>
+<div class="main">
+  <app-main-side-nav></app-main-side-nav>
+  <div class="form1">
+    <div class="mainbox">
+      <div class="sidebox">
+        <button mat-flat>
+          <mat-icon color="accent">save</mat-icon>
+          SAVE
+        </button>
+        <button mat-flat>
+          <mat-icon color="accent">preview</mat-icon>
+          PREVIEW
+        </button>
+        <button mat-flat>
+          <mat-icon color="accent">publish</mat-icon>
+          PUBLISH
+        </button>
+        <button mat-flat>
+          <mat-icon color="accent">add_alert</mat-icon>
+          REMIND
+        </button>
+        <button mat-flat>
+          <mat-icon color="accent">description</mat-icon>
+          GENERATE REPORT
+        </button>
+      </div>
+      <div class="topbox">
+        <h2>Questionnaire</h2>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Enter title</mat-label>
+          <input matInput>
+          <mat-hint>Please enter appropriate title</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Description</mat-label>
+          <textarea matInput style="height:40px;"></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="btntext" appearance="outline" floatLabel="always">
+          <mat-label>Button Text</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+        <mat-form-field class="btncheck" appearance="outline" floatLabel="always">
+          <mat-label>Button Text</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Check box text</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+      </div>
+      <div class="bottombox">
+        <h2>Additional Details</h2>
+        <div class="date">
+          <mat-form-field class="date1" appearance="outline" floatLabel="always">
+            <mat-label>Select Start Date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix class="dateicon" [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker color="accent"></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="date2" appearance="outline" floatLabel="always">
+            <mat-label>Select End Date</mat-label>
+            <input matInput [matDatepicker]="picker1">
+            <mat-datepicker-toggle matSuffix class="dateicon" [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1 color="accent"></mat-datepicker>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="date3" appearance="outline" floatLabel="always">
+            <mat-label>Auto Reminder</mat-label>
+            <input matInput>
+            <span matSuffix>Days</span>
+          </mat-form-field>
+        </div>
+        <mat-form-field class="content1" appearance="outline" floatLabel="always">
+          <mat-label>Select Content PPT File</mat-label>
+          <ngx-mat-file-input [accept]="'.ppt,.pptx'" >
+        <mat-icon ngxMatFileInputIcon color="accent">backup</mat-icon>
+   </ngx-mat-file-input>
+        </mat-form-field>
+
+        <mat-form-field class="content2" appearance="outline" floatLabel="always">
+          <mat-label>Select Particular xl sheet</mat-label>
+          <ngx-mat-file-input [accept]="'.xls,.xlsx,.docx,.doc'">
+            <mat-icon ngxMatFileInputIcon color="accent">backup</mat-icon>
+       </ngx-mat-file-input>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Mail Body</mat-label>
+          <textarea matInput style="height:70px;"></textarea>
+        </mat-form-field>
+
+      </div>
+
+      <div class="Option-container">
+        <span class="toggle-option" *ngIf="!overlay">
+          <div routerLink="/change-password" class="display">
+            Change Password
+          </div>
+          <div class="display1">
+            <button mat-flat (click)="openSuperAdminDialog()">
+              Add/Remove Super Admins</button>
+          </div>
+          <div class="display1">
+            <button mat-flat (click)="openAdminDialog()">
+              Add/Remove Admins
+            </button>
+          </div>
+        </span>
+        <div class="icon1" (click)="openOverlay()">
+          <button mat-fab class="fab-button">
+            <mat-icon>{{ closeIcon}}</mat-icon>
+          </button>
+        </div>
+       
+      </div>
+     
+  </div>
+ 
+  </div>
+  
+  </div>
+  <div class="overlay" *ngIf="!overlay"></div>
+</div>
+  <app-footer></app-footer>
